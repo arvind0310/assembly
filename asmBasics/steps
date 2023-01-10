@@ -1,0 +1,25 @@
+## to comppile: 
+
+1. covert into object code -
+	nasm -f elf64 -o test.o test.asm  OR nasm -f elf64 test.asm -o test.O
+
+2. link the obj code to linker - 
+	ld test.o -o test
+
+3. run ./test
+
+
+## to visualize -
+
+test -> (the executable obj code)
+
+1. gdb test
+2. layout asm
+3. break _start
+4. run
+
+commands -
+	stepi -> move to next line (execute the cureent line)
+	info registers rsp -> will tell whats the value inside the register.
+	x/x (adresss) -> the value at that address
+	

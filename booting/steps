@@ -1,0 +1,10 @@
+## convert into binary file
+
+ nasm -f bin printChar.asm -o boot.bin
+
+## see memory adress of that program (di assembling the binary code)
+ ndisasm boot.bin
+
+## see output on video telegraph
+
+ qemu-system-x86_64 -hda boot.bin 

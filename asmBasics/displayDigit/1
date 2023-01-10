@@ -1,0 +1,22 @@
+section .data
+	digit db 0,10
+	digitLen equ $ - digit
+
+section .text
+	global _start
+
+_start:
+	call _printDigit
+
+__printDigit:
+	add rax,48
+	mov [digit],al
+	mov rax,1
+	mov rdi,1
+	mov rsi,digit
+	mov rdx,digitLen
+	syscall
+	ret
+
+	
+	
